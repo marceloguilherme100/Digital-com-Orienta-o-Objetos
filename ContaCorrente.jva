@@ -1,0 +1,19 @@
+public class ContaCorrente extends Conta {
+    private double limiteChequeEspecial;
+
+    public ContaCorrente(int numero, Cliente cliente, double limiteChequeEspecial) {
+        super(numero, cliente);
+        this.limiteChequeEspecial = limiteChequeEspecial;
+    }
+
+    public void usarChequeEspecial(double valor) {
+        if (valor <= limiteChequeEspecial) {
+            this.saldo -= valor;
+            // Registrar transação
+        } else {
+            // Exibir mensagem de limite insuficiente
+        }
+    }
+
+    // Getters e Setters
+}
